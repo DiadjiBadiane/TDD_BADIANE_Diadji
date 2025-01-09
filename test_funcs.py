@@ -10,5 +10,20 @@ class TestMaxListes(unittest.TestCase):
         self.assertEqual(max_listes([128, 854, 102, 710, 44]), [128, 710, 854])
         self.assertEqual(max_listes([301, 250, 552, 384, 474]), [384, 474, 552])
 
+
+class TestNombrePremier(unittest.TestCase):
+    def test_nombres_premiers(self):
+        self.assertEqual(1, False)
+        self.assertEqual(2, True)
+        self.assertEqual(3, True)
+        self.assertEqual(7, True)
+        self.assertEqual(17, True)
+        self.assertEqual(4, False)
+        self.assertEqual(9, False)
+        self.assertEqual(15, False)
+        self.assertEqual(0, False)
+        self.assertEqual(-7, False)
+
+
 if __name__ == '__main__':
     unittest.main()

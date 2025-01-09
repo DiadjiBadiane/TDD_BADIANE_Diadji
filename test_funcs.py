@@ -13,16 +13,16 @@ class TestMaxListes(unittest.TestCase):
 
 class TestNombrePremier(unittest.TestCase):
     def test_nombres_premiers(self):
-        self.assertEqual(1, False)
-        self.assertEqual(2, True)
-        self.assertEqual(3, True)
-        self.assertEqual(7, True)
-        self.assertEqual(17, True)
-        self.assertEqual(4, False)
-        self.assertEqual(9, False)
-        self.assertEqual(15, False)
-        self.assertEqual(0, False)
-        self.assertEqual(-7, False)
+        self.assertEqual(nombre_premier(1), False)
+        self.assertEqual(nombre_premier(2), True)
+        self.assertEqual(nombre_premier(3), True)
+        self.assertEqual(nombre_premier(7), True)
+        self.assertEqual(nombre_premier(17), True)
+        self.assertEqual(nombre_premier(4), False)
+        self.assertEqual(nombre_premier(9), False)
+        self.assertEqual(nombre_premier(15), False)
+        self.assertEqual(nombre_premier(0), False)
+        self.assertEqual(nombre_premier(-7), False)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,1 @@
+exercices 1, 2 et 3 qui suivent la méthode TDD.

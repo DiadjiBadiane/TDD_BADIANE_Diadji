@@ -24,6 +24,17 @@ class TestNombrePremier(unittest.TestCase):
         self.assertEqual(nombre_premier(0), False)
         self.assertEqual(nombre_premier(-7), False)
 
+class TestEstArithmetique(unittest.TestCase):
+    def test_est_arithmetique(self):
+        self.assertEqual(est_arithmetique([2, 4, 6, 8, 10]), True)
+        self.assertEqual(est_arithmetique([10, 7, 4, 1, -2]), False)
+        self.assertEqual(est_arithmetique([1, 1, 1, 1]), True)
+        self.assertEqual(est_arithmetique([1, 3, 6, 10]), False)
+        self.assertEqual(est_arithmetique([1]), True)
+        self.assertEqual(est_arithmetique([1, 2]), True)
+        self.assertEqual(est_arithmetique([]), True)
+        self.assertEqual(est_arithmetique([5, 8, 11, 15]), True)
+
 
 if __name__ == '__main__':
     unittest.main()

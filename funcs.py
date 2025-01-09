@@ -21,6 +21,11 @@ def nombre_premier(nombre):
             if nombre % k == 0:
                 return False
         return True
+    
+
+#fonction qui renvoie si une suite est arithmétique
+def est_arithmetique(liste):
+    pass
 
             
     

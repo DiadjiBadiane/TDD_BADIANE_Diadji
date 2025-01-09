@@ -25,7 +25,15 @@ def nombre_premier(nombre):
 
 #fonction qui renvoie si une suite est arithmétique
 def est_arithmetique(liste):
-    pass
+    if len(liste) <= 1:
+        return True
+    
+    raison = liste[1] - liste[0]
+
+    for k in range(len(liste) - 1):
+        if liste[k + 1] - liste[k] != raison:
+            return False
+    return True
 
             
     

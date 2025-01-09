@@ -27,13 +27,13 @@ class TestNombrePremier(unittest.TestCase):
 class TestEstArithmetique(unittest.TestCase):
     def test_est_arithmetique(self):
         self.assertEqual(est_arithmetique([2, 4, 6, 8, 10]), True)
-        self.assertEqual(est_arithmetique([10, 7, 4, 1, -2]), False)
+        self.assertEqual(est_arithmetique([10, 7, 4, 1, -2]), True)
         self.assertEqual(est_arithmetique([1, 1, 1, 1]), True)
         self.assertEqual(est_arithmetique([1, 3, 6, 10]), False)
         self.assertEqual(est_arithmetique([1]), True)
         self.assertEqual(est_arithmetique([1, 2]), True)
         self.assertEqual(est_arithmetique([]), True)
-        self.assertEqual(est_arithmetique([5, 8, 11, 15]), True)
+        self.assertEqual(est_arithmetique([5, 8, 11, 15]), False)
 
 
 if __name__ == '__main__':

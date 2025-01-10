@@ -46,7 +46,28 @@ class TestBaseLogement(unittest.TestCase):
         date = self.db_manager.random_date(start, end)
         self.assertTrue(start <= date <= end)
 
- 
+    def test_insert_mesures(self):
+        self.db_manager.insert_mesures(
+            capteurs=[1, 2],
+            start_date=datetime(2023, 1, 1),
+            end_date=datetime(2023, 12, 31),
+            n=3,
+        )
+        self.db_manager.cursor.execute("SELECT COUNT(*) as count FROM mesure")
+        count = self.db_manager.cursor.fetchone()["count"]
+        self.assertEqual(count, 6)
+
+    def test_insert_factures(self):
+        self.db_manager.insert_factures(
+            logements=["7 rue Larue"],
+            types_factures=["Eau", "Electricité"],
+            start_date=datetime(2023, 1, 1),
+            end_date=datetime(2023, 12, 31),
+            n=2,
+        )
+        self.db_manager.cursor.execute("SELECT COUNT(*) as count FROM facture")
+        count = self.db_manager.cursor.fetchone()["count"]
+        self.assertEqual(count, 2)
 
 
 if __name__ == "__main__":

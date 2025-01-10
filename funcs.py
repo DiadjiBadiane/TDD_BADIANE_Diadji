@@ -62,19 +62,21 @@ class FIFO:
             
 class LIFO:
     def __init__(self):
-        pass
+        self.elements = []
 
     def empiler(self, valeur):
-        pass
+        self.elements.append(valeur)
 
     def depiler(self):
-        pass
+        if self.est_vide():
+            raise ValueError("La file est vide")
+        return self.elements.pop()
 
     def est_vide(self):
-        pass
+        return len(self.elements) == 0
 
     def taille(self):
-        pass
+        return len(self.elements)
 
     
     

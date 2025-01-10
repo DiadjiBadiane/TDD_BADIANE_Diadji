@@ -1,4 +1,4 @@
-#exercice 1
+#Exercice 1
 
 #fonction qui renvoie les 3 plus grandes valeurs d' une liste d' entier
 def max_listes(liste_entiers):
@@ -35,6 +35,28 @@ def est_arithmetique(liste):
             return False
     return True
 
+
+
+
+
+#Exercice 2
+
+#Implémentation de la classe FIFO por stocker des ints
+class FIFO:
+    def __init__(self):
+        pass
+
+    def enfiler(self, valeur):
+        pass
+
+    def defiler(self):
+        pass
+
+    def est_vide(self):
+        pass
+
+    def taille(self):
+        pass
             
     
     

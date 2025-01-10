@@ -2,6 +2,7 @@ from funcs import *
 import unittest
 
 
+#Tests de l' exercice 1
 class TestMaxListes(unittest.TestCase):
     def test_max_listes(self):
         self.assertEqual(max_listes([1, 2, 3, 4, 5, 6]), [4, 5, 6])
@@ -34,6 +35,28 @@ class TestEstArithmetique(unittest.TestCase):
         self.assertEqual(est_arithmetique([1, 2]), True)
         self.assertEqual(est_arithmetique([]), True)
         self.assertEqual(est_arithmetique([5, 8, 11, 15]), False)
+
+
+
+#Tests de l' exercice 2
+class TESTFIFO(unittest.TestCase):
+    def setUp(self):
+        self.fifo = FIFO()
+
+    def test_est_vide_fifo(self):
+        self.assertTrue(self.fifo.est_vide())
+        self.assertEqual(self.fifo.taille(), 0)
+
+    def test_enfiler_defiler(self):
+        self.fifo.enfiler(1)
+        self.fifo.enfiler(2)
+        self.fifo.enfiler(3)
+        self.assertEqual(self.fifo.taille(), 3)
+        self.assertEqual(self.fifo.defiler(), 1)
+        self.assertEqual(self.fifo.defiler(), 2)
+        self.assertEqual(self.fifo.taille(), 1)
+
+
 
 
 if __name__ == '__main__':

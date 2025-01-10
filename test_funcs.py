@@ -56,6 +56,27 @@ class TESTFIFO(unittest.TestCase):
         self.assertEqual(self.fifo.defiler(), 2)
         self.assertEqual(self.fifo.taille(), 1)
 
+class  TESTLIFO(unittest.TestCase):
+    def setUp(self):
+        self.lifo = LIFO()
+
+    def test_est_vide_lifxo(self):
+        self.assertTrue(self.lifo.est_vide())
+        self.assertEqual(self.lifo.taille(), 0)
+
+    def test_emplier_depiler(self):
+        self.lifo.empiler(1)
+        self.lifo.empiler(2)
+        self.lifo.empiler(3)
+        self.assertEqual(self.lifo.taille(), 3)
+        self.assertFalse(self.lifo.est_vide())
+        
+        self.assertEqual(self.lifo.depiler(), 3)
+        self.assertEqual(self.lifo.depiler(), 2)
+        self.assertEqual(self.lifo.depiler(), 1)
+        self.assertTrue(self.lifo.est_vide())
+
+
 
 
 

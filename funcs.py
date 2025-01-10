@@ -60,6 +60,22 @@ class FIFO:
     def taille(self):
         return len(self.elements)
             
+class LIFO:
+    def __init__(self):
+        pass
+
+    def empiler(self, valeur):
+        pass
+
+    def depiler(self):
+        pass
+
+    def est_vide(self):
+        pass
+
+    def taille(self):
+        pass
+
     
     
 

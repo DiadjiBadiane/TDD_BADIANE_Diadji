@@ -44,19 +44,21 @@ def est_arithmetique(liste):
 #Implémentation de la classe FIFO por stocker des ints
 class FIFO:
     def __init__(self):
-        pass
+        self.elements = []
 
     def enfiler(self, valeur):
-        pass
+        self.elements.append(valeur)
 
     def defiler(self):
-        pass
+        if self.est_vide():
+            raise ValueError("La file est vide")
+        return self.elements.pop(0)
 
     def est_vide(self):
-        pass
+        return len(self.elements) == 0
 
     def taille(self):
-        pass
+        return len(self.elements)
             
     
     
